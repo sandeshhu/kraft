@@ -12,6 +12,7 @@ import { ExpandedTabs } from '@/components/ui/expanded-tabs'
 import ThemeToggleButton from '@/components/ui/theme-toggle-button'
 import { usePathname } from 'next/navigation'
 import TransitionLink from '@/app/components/TransitionLink'
+import { useMobileMenu } from '@/app/components/Navigation'
 
 const Navbar = () => {
     const pathname = usePathname()
@@ -44,6 +45,7 @@ const Navbar = () => {
     ]
     const { theme, systemTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
+    const { setOpen } = useMobileMenu()
 
     useEffect(() => {
         setMounted(true)
@@ -86,9 +88,23 @@ const Navbar = () => {
                       </Link>
                    </Button> */}
                    
-                   <ThemeToggleButton
-                    variant='circle-blur'
-                   />
+                   {/* Mobile Menu Button */}
+                   <Button
+                     variant="ghost"
+                     size="icon"
+                     className="md:hidden"
+                     onClick={() => setOpen(true)}
+                     aria-label="Open menu"
+                   >
+                     <Menu className="h-6 w-6" />
+                   </Button>
+                   
+                   {/* Theme Toggle - Hidden on Mobile */}
+                   <div className='hidden md:block'>
+                     <ThemeToggleButton
+                      variant='circle-blur'
+                     />
+                   </div>
 
                    
                 </div>

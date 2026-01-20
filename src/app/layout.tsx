@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider"
 import Navbar from "./(home)/components/Navbar";
 import ButtonShowcase from "./(home)/components/ButtonShowcase";
-import Navigation from "./components/Navigation";
+import Navigation, { MobileMenuProvider } from "./components/Navigation";
 import { FuturisticBackground } from "@/components/ui/FuturisticBackground";
 
 const geistSans = Geist({
@@ -39,10 +39,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-gradient-to-b from-gray-900 to-gray-900 text-white min-h-screen`}
 
       >
-        <FuturisticBackground/>
-        <Navigation />
+        <MobileMenuProvider>
+          <FuturisticBackground/>
+          <Navigation />
           {children}
-
+        </MobileMenuProvider>
       </body>
      </ThemeProvider>
     </html>
