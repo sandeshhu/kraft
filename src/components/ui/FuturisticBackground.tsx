@@ -1,9 +1,6 @@
 // src/components/ui/FuturisticBackground.tsx
 'use client'
 
-import { useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
-
 export const FuturisticBackground = () => {
   return (
     <div className="fixed inset-0 -z-10">

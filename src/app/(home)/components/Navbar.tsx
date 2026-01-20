@@ -5,13 +5,10 @@ import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { LOGO } from '../../../../public/assets/images/images'
 import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { Menu, X, Home, Briefcase, Info, BookOpen, Package, Mail, Settings, Package2, LucideSettings2, LucideSettings } from "lucide-react"
-import {BsDiscord} from 'react-icons/bs'
+import { Menu, Home, Briefcase, Info, BookOpen, Package2 } from "lucide-react"
 import { ExpandedTabs } from '@/components/ui/expanded-tabs'
 import ThemeToggleButton from '@/components/ui/theme-toggle-button'
 import { usePathname } from 'next/navigation'
-import TransitionLink from '@/app/components/TransitionLink'
 import { useMobileMenu } from '@/app/components/Navigation'
 
 const Navbar = () => {

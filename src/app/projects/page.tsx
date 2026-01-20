@@ -18,7 +18,6 @@ export default function Project2Page() {
     year: number;
     alt: string;
   } | null>(null);
-  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const projects = [
     {
       image1:

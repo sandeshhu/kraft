@@ -1,6 +1,4 @@
 "use client";
-import ButtonShowcase from "@/app/(home)/components/ButtonShowcase";
-import Navbar from "@/app/(home)/components/Navbar";
 import Image from "next/image";
 
 interface ProjectCardProps {

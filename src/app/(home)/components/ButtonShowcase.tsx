@@ -1,7 +1,6 @@
 "use client";
 import type React from "react";
 import { useState } from "react";
-import BadgeButton from "@/components/ui/badge-button";
 import ShareButton from "@/components/ui/share-button";
 // import SlideButton from "@/components/ui/slide-button";
 import WrapButton from "@/components/ui/wrap-button";
@@ -24,13 +23,13 @@ const ButtonShowcase = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus({ success: true, message: "Message sent successfully!" });
-    } catch (error) {
+    } catch {
       setSubmitStatus({ success: false, message: "Failed to send message." });
     }
     setIsSubmitting(false);
@@ -153,7 +152,7 @@ const ButtonShowcase = () => {
                 )}
               </form>
 
-              <WrapButton className="mt-6">Let's build sleek</WrapButton>
+              <WrapButton className="mt-6">Let&apos;s build sleek</WrapButton>
             </div>
           </div>
         </div>

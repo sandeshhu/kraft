@@ -15,12 +15,12 @@ const Hero = () => {
                  <h1 className='font-[poppins] text-6xl md:mt-2 font-black text-center'>INSPIRE. INNOVATE. INTEGRATE!</h1>
                  
                  <div className='text-center w-fit text-base mt-4 px-0 md:px-28 font-mono'>
-                <p>We're a dynamic team of Creators, Chefs, Thinkers, Designers, Engineers & Explorers that craft products & services with a keen eye for detail & dedication to the latest trends & technologies.</p>
+                <p>We&apos;re a dynamic team of Creators, Chefs, Thinkers, Designers, Engineers & Explorers that craft products & services with a keen eye for detail & dedication to the latest trends & technologies.</p>
             </div>
            
 
             <WrapButton className='mt-5'>
-                Let's build Sleek
+                Let&apos;s build Sleek
             </WrapButton>
 
           
